@@ -55,7 +55,7 @@ function usage() {
 
 cd "$(dirname $0)"
 
-subsetArg=""
+# subsetArg=""
 clearCaches=false
 cleanSettings=false
 reinstall=false
@@ -85,58 +85,59 @@ while [ "$1" != "" ]; do
     continue
   fi
   # parse arguments
-  subsetArg="$arg"
-  newSubset=""
-  if [ "$subsetArg" == "m" -o "$subsetArg" == "main" ]; then
-    newSubset=main
-  fi
-  if [ "$subsetArg" == "c" -o "$subsetArg" == "compose" ]; then
-    newSubset=compose
-  fi
-  if [ "$subsetArg" == "ca" -o "$subsetArg" == "camera" ]; then
-    newSubset=camera
-  fi
-  if [ "$subsetArg" == "f" -o "$subsetArg" == "flan" ]; then
-    newSubset=flan
-  fi
-  if [ "$subsetArg" == "media" ]; then
-    newSubset=media
-  fi
-  if [ "$subsetArg" == "w" -o "$subsetArg" == "wear" ]; then
-    newSubset=wear
-  fi
-  if [ "$subsetArg" == "g" -o "$subsetArg" == "glance" ]; then
-      newSubset=glance
-  fi
-  if [ "$subsetArg" == "k" -o "$subsetArg" == "kmp" ]; then
-      newSubset=kmp
-  fi
-  if [ "$subsetArg" == "native" ]; then
-    newSubset=native
-  fi
-  if [ "$subsetArg" == "a" -o "$subsetArg" == "all" ]; then
-    newSubset=all
-  fi
-  if [ "$subsetArg" == "t" -o "$subsetArg" == "tools" ]; then
-    newSubset=tools
-  fi
-  if [ "$newSubset" == "" ]; then
-    echo "Unrecognized argument: '$subsetArg'"
-    usage
-  fi
-  if [ "$projectSubset" != "" ]; then
-    echo "Unrecognized argument '$subsetArg', cannot specify project subset more than once"
-    usage
-  fi
-  projectSubset=$newSubset
+#  subsetArg="$arg"
+#  newSubset=""
+#  if [ "$subsetArg" == "m" -o "$subsetArg" == "main" ]; then
+#    newSubset=main
+#  fi
+#  if [ "$subsetArg" == "c" -o "$subsetArg" == "compose" ]; then
+#    newSubset=compose
+#  fi
+#  if [ "$subsetArg" == "ca" -o "$subsetArg" == "camera" ]; then
+#    newSubset=camera
+#  fi
+#  if [ "$subsetArg" == "f" -o "$subsetArg" == "flan" ]; then
+#    newSubset=flan
+#  fi
+#  if [ "$subsetArg" == "media" ]; then
+#    newSubset=media
+#  fi
+#  if [ "$subsetArg" == "w" -o "$subsetArg" == "wear" ]; then
+#    newSubset=wear
+#  fi
+#  if [ "$subsetArg" == "g" -o "$subsetArg" == "glance" ]; then
+#      newSubset=glance
+#  fi
+#  if [ "$subsetArg" == "k" -o "$subsetArg" == "kmp" ]; then
+#      newSubset=kmp
+#  fi
+#  if [ "$subsetArg" == "native" ]; then
+#    newSubset=native
+#  fi
+#  if [ "$subsetArg" == "a" -o "$subsetArg" == "all" ]; then
+#    newSubset=all
+#  fi
+#  if [ "$subsetArg" == "t" -o "$subsetArg" == "tools" ]; then
+#    newSubset=tools
+#  fi
+#  if [ "$newSubset" == "" ]; then
+#    echo "Unrecognized argument: '$subsetArg'"
+#    usage
+#  fi
+#  if [ "$projectSubset" != "" ]; then
+#    echo "Unrecognized argument '$subsetArg', cannot specify project subset more than once"
+#    usage
+#  fi
+#  projectSubset=newSubset
 done
 
-if [ "$projectSubset" == "" ]; then
-  echo "Project subset is required"
-  usage
-fi
+# if [ "$projectSubset" == "" ]; then
+#   echo "Project subset is required"
+#   usage
+# fi
 
-export ANDROIDX_PROJECTS=$projectSubset
+# export ANDROIDX_PROJECTS=$projectSubset
+export ANDROIDX_PROJECTS=compose
 
 # ensures the nonexistence of a file or directory, and makes a backup
 function remove() {
