@@ -177,6 +177,8 @@ if [ "$cleanSettings" == "true" ]; then
   remove ~/.android
 fi
 
+export ALLOW_PUBLIC_REPOS=true
+
 if [ "$clearCaches" == "true" ]; then
   # delete (without backup) files that users won't have customized
   git clean -fdX .idea/
