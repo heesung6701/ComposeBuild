@@ -40,11 +40,11 @@ dependencies {
     // but it doesn't work in androidx.
     // See aosp/1804059
     implementation "androidx.lifecycle:lifecycle-common-java8:2.5.1"
-    api(projectOrArtifact(":navigation:navigation-runtime-ktx"))
+    api(libs.androidxNavigationRuntimeKtx)
 
     androidTestImplementation(projectOrArtifact(":compose:material:material"))
     androidTestImplementation projectOrArtifact(":compose:test-utils")
-    androidTestImplementation(projectOrArtifact(":navigation:navigation-testing"))
+    androidTestImplementation(libs.androidxNavigationTesting)
     androidTestImplementation(projectOrArtifact(":internal-testutils-navigation"), {
         exclude group: "androidx.navigation", module: "navigation-common"
     })

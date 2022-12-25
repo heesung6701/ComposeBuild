@@ -37,10 +37,10 @@ android {
 }
 
 dependencies {
-    androidTestImplementation(project(":benchmark:benchmark-junit4"))
-    androidTestImplementation(project(":benchmark:benchmark-macro-junit4"))
+    androidTestImplementation(libs.androidxBenchmarkJunit4)
+    androidTestImplementation(libs.androidxBenchMarkmacroJunit4)
     androidTestImplementation(project(":internal-testutils-macrobenchmark"))
-    androidTestImplementation(project(":tracing:tracing-ktx"))
+    androidTestImplementation(libs.androidxTracingKtx)
     androidTestImplementation(libs.kotlinTest)
     androidTestImplementation(libs.testRules)
     androidTestImplementation(libs.testExtJunit)

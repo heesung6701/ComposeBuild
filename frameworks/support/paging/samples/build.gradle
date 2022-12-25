@@ -41,10 +41,10 @@ dependencies {
     implementation("androidx.room:room-ktx:2.3.0-rc01")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
 
-    implementation(project(":paging:paging-common"))
-    implementation(project(":paging:paging-guava"))
-    implementation(project(":paging:paging-runtime"))
-    implementation(project(":paging:paging-rxjava2"))
+    implementation(libs.androidxPagingCommon)
+    implementation(libs.androidxPagingGuava)
+    implementation(libs.androidxPagingRuntime)
+    implementation(libs.androidxPagingRxjava2)
 
     implementation(libs.guavaAndroid)
     implementation(libs.multidex)

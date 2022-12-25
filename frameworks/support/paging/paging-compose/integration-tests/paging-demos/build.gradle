@@ -33,9 +33,9 @@ dependencies {
     implementation(projectOrArtifact(":paging:paging-compose"))
     implementation(projectOrArtifact(":paging:paging-compose:paging-compose-samples"))
 
-    kapt(projectOrArtifact(":room:room-compiler"))
-    implementation(projectOrArtifact(":room:room-ktx"))
-    implementation(projectOrArtifact(":room:room-paging"))
+    kapt(libs.androidxRoomCompiler)
+    implementation(libs.androidxRoomKtx)
+    implementation(libs.androidxRoomPaging)
 }
 
 androidx {

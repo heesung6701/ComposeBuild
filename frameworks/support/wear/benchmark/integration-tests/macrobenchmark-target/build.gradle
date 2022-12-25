@@ -38,9 +38,9 @@ android {
 dependencies {
     implementation(libs.kotlinStdlib)
     implementation(libs.constraintLayout)
-    implementation projectOrArtifact(":activity:activity-ktx")
+    implementation(libs.androidxActivityKtx)
     implementation 'androidx.core:core-ktx'
     implementation(libs.material)
-    implementation(project(":profileinstaller:profileinstaller"))
+    implementation(libs.androidxProfileInstaller)
     implementation 'androidx.wear:wear:1.1.0'
 }

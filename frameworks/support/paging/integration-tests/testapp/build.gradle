@@ -29,9 +29,9 @@ dependencies {
     implementation(projectOrArtifact(":room:room-rxjava2"))
     implementation(projectOrArtifact(":room:room-paging"))
 
-    implementation(project(":paging:paging-common-ktx"))
-    implementation(project(":paging:paging-runtime"))
-    implementation(project(":paging:paging-rxjava2"))
+    implementation(libs.androidxPagingCommonKtx)
+    implementation(libs.androidxPagingRuntime)
+    implementation(libs.androidxPagingRxjava2)
 
     kapt(projectOrArtifact(":room:room-compiler"))
 

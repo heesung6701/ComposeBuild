@@ -34,11 +34,11 @@ dependencies {
         implementation(project(":compose:foundation:foundation"))
         implementation(project(":compose:foundation:foundation-layout"))
 
-        implementation(project(":constraintlayout:constraintlayout-core"))
+        implementation(libs.androidxConstraintlayoutCore)
 
         androidTestImplementation(project(":compose:ui:ui-test"))
         androidTestImplementation(project(":compose:ui:ui-test-junit4"))
-        androidTestImplementation(project(":activity:activity"))
+        androidTestImplementation(libs.androidxActivity)
 
         androidTestImplementation(libs.testRules)
         androidTestImplementation(libs.testRunner)
