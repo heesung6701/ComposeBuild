@@ -1,6 +1,28 @@
+# presets
+external/
+golden/
+tools/
+prebuilts/
+UNZIP_PRESETS
+
 # studio
 frameworks/support/studio
 
+# build
+**/build
+
+# idea
+.idea
+**/.iead
+
+# gradle
+.gradle
+**/.gradle
+frameworks/support/local.properties
+
+# git
+.git
+**/.git
 
 # mac
 .DS_Store
