@@ -4,9 +4,9 @@ import androidx.build.gradle.gcpbuildcache.GcpBuildCacheServiceFactory
 
 pluginManagement {
     repositories {
-        maven {
-            url = new File(buildscript.sourceFile.parent + "/../../prebuilts/androidx/external").getCanonicalFile()
-        }
+        // maven {
+        //     url = new File(buildscript.sourceFile.parent + "/../../prebuilts/androidx/external").getCanonicalFile()
+        // }
         if (System.getenv("ALLOW_PUBLIC_REPOS") != null || System.getProperty("ALLOW_PUBLIC_REPOS") != null) {
             mavenCentral()
             google()

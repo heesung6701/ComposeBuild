@@ -38,25 +38,25 @@ def addMavenRepositories(RepositoryHandler handler) {
             }
         }
     }
-    handler.maven {
-        url("${repos.prebuiltsRoot}/androidx/internal")
-        metadataSources {
-            mavenPom()
-            artifact()
-        }
-        content {
-            includeGroupByRegex "android.*"
-            includeGroupByRegex "com.android.support.*"
-            excludeGroupByRegex "androidx.databinding.*"
-        }
-    }
-    handler.maven {
-        url("${repos.prebuiltsRoot}/androidx/external")
-        metadataSources {
-            mavenPom()
-            artifact()
-        }
-    }
+    // handler.maven {
+    //     url("${repos.prebuiltsRoot}/androidx/internal")
+    //     metadataSources {
+    //         mavenPom()
+    //         artifact()
+    //     }
+    //     content {
+    //         includeGroupByRegex "android.*"
+    //         includeGroupByRegex "com.android.support.*"
+    //         excludeGroupByRegex "androidx.databinding.*"
+    //     }
+    // }
+    // handler.maven {
+    //     url("${repos.prebuiltsRoot}/androidx/external")
+    //     metadataSources {
+    //         mavenPom()
+    //         artifact()
+    //     }
+    // }
     if (System.getenv("ALLOW_PUBLIC_REPOS") != null || System.getProperty("ALLOW_PUBLIC_REPOS") != null) {
         handler.mavenCentral()
         handler.google()
